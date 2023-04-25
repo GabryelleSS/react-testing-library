@@ -1,0 +1,128 @@
+.App {
+  text-align: center;
+  /* display: flex; */
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*  */
+
+.container-chocolate {
+  margin-bottom: 30px;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+button {
+  margin-right: 14px;
+  margin-top: 10px;
+}
+
+/* .input-repos {
+  width: 200px;
+  padding: 10px 15px;
+  border-radius: 30px;
+  border: 1px solid #c4c4c4;
+}
+
+.input-repos:hover, .input-repos:focus-visible {
+  outline: none;
+}
+
+.btn-repos {
+  background: #006fff;
+  border: 1px solid transparent;
+  border-radius: 30px;
+  padding: 10px 20px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn-clear {
+  background: #e7e7e7;
+  color: #000;
+}
+
+.container-fields {
+  display: flex;
+  gap: 12px;
+  justify-content: end;
+  margin-bottom: 30px;
+}
+
+.container-repos {
+  margin: 0 auto;
+  padding: 30px;
+  width: max-content;
+}
+
+.container-text {
+
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 24px;
+}
+
+li {
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+li:hover {
+  background-color: #c4c4c4;
+  cursor: pointer;  
+}
+
+.branch {
+  padding: 5px 10px;
+  margin-left: 60px;
+  background: #c1c3c7;
+  border-radius: 30px;
+  border: 1px solid #1678fa;
+  color: #1678fa;
+  font-weight: 500;
+} */
