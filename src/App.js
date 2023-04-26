@@ -13,6 +13,7 @@ function App() {
   const [reposName, setRepoName] = useState([]);
   const [initialText, setInitialText] = useState('Sem repos');
   const [userName, setUserName] = useState('');
+  
   const dispatch = useAppDispatch();
 
   const currentMood = useAppSelector((state) => state.mood);
@@ -22,18 +23,15 @@ function App() {
     dispatch(updateCatMood(mood));
   }
 
-  // const handleUserName = (evt) => {
-  //   const value = evt.target.value;
-
-  //   console.log('value', value)
-  //   setUserName(value);
-  // }
-
   const fetchNames = useCallback(async () => {
     setInitialText('Loading...');
     const response = await getApi();
 
-    const names = response.map(res => res.name)
+    if (!response.ok) {
+      setInitialText(response.statusText);
+    }
+
+    const names = response?.length && response.map(res => res.name)
     setRepoName(names);
 
     dispatch(updateReposName(names));
@@ -65,13 +63,6 @@ function App() {
 
       <div className="container-repos">
         <div className="container-fields">
-          {/* <input 
-            placeholder="Digite o nome do usuario" 
-            data-testid="input-repos"
-            className="input-repos"
-            // onChange={(evt) => handleUserName(evt)}
-          /> */}
-
           <button 
             data-testid="btn-fetch-repos" 
             onClick={() => fetchNames()}
@@ -100,7 +91,7 @@ function App() {
                       {name}
                     </li>
                   ) 
-                : <p>{initialText}</p>
+                : <p data-testid="teste">{initialText}</p>
             }
           </ul>
         </div>

@@ -6,7 +6,10 @@ async function getApi(userName) {
 		}
 	);
 	if (!response.ok) {
-		throw new Error(`HTTP error! status: ${response.status}`);
+		// return "Não foi possivel obter os dados";
+		return response;
+		// return new Error(`HTTP error! status: ${response.status}`);
+		// throw new Error(`HTTP error! status: ${response.status}`);
 	}
 
 	const data = await response.json();
